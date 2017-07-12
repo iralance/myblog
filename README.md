@@ -1,1 +1,2 @@
-iralance blog
+[钱磊的博客](http://qianlei.cc)
+> note study
