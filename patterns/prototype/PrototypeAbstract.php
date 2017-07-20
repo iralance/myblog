@@ -1,5 +1,5 @@
 <?php
-namespace Prototype;
+namespace prototype;
 
 abstract class PrototypeAbstract
 {

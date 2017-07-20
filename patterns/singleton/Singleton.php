@@ -1,5 +1,5 @@
 <?php
-namespace Singleton;
+namespace singleton;
 
 /**
  * Class Singleton

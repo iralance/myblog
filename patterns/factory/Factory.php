@@ -1,5 +1,5 @@
 <?php
-namespace Factory;
+namespace factory;
 
 interface Factory {
     public function produce();

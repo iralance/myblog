@@ -8,8 +8,8 @@ function autoload($class)
     require dirname($_SERVER['SCRIPT_FILENAME']) . '//..//' . str_replace('\\', '/', $class) . '.php';
 }
 
-use Factory\Farm;
-use Factory\SampleFactory;
+use factory\Farm;
+use factory\SampleFactory;
 
 //工厂模式
 $farm = new Farm();

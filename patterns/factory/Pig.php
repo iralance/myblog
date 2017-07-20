@@ -1,5 +1,5 @@
 <?php
-namespace Factory;
+namespace factory;
 
 class Pig implements AnimalInterface
 {
