@@ -1,7 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: qianlei
- * Date: 2017/7/20
- * Time: 下午10:07
- */
+namespace adapter;
+
+class AdvanceWmaPlayer implements MediaAdvanceInterface
+{
+    public function playMp4($file='')
+    {
+        //do nothing
+    }
+
+    public function playWma($file='')
+    {
+        echo 'AdvanceWmaPlayer driver playing file: ' . $file . ".wma\n";
+    }
+}

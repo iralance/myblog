@@ -1,7 +1,11 @@
 <?php
+namespace adapter;
+
 /**
- * Created by PhpStorm.
- * User: qianlei
- * Date: 2017/7/20
- * Time: 下午10:13
+ * 普通媒体接口
  */
+
+interface MediaInterface
+{
+    public function play($file='');
+}

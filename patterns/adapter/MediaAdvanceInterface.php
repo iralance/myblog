@@ -1,7 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: qianlei
- * Date: 2017/7/20
- * Time: 下午10:08
- */
+namespace adapter;
+
+interface MediaAdvanceInterface
+{
+    public function playMp4($file='');
+    public function playWma($file='');
+}
