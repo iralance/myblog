@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>let_const_use_cases</title>
+</head>
+<body>
+<script>
+    //立即执行函数来获取一个私有变量
+    //demo window.name
+//    (function (){
+//        var name = "iralance";
+//        console.log(name)
+//    })();
+    {
+        const name = "iralance"
+    }
+    console.log(name)
+
+    for (let i =0 ;i<10;i++){
+        console.log(i);
+        setTimeout(function(){
+            console.log(`this i is ${i}`)
+        },1000);
+    }
+</script>
+</body>
+</html>
