@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>var-let-const</title>
+</head>
+<body>
+<script>
+    //var可以重复申明 function scope
+    var price = 200;
+    var count = 10;
+    if(count > 5) {
+        //let or const block scope
+        let discount = price * 0.6;
+        console.log(`this price is ${discount}`)
+    }
+    console.log(price);
+
+    let age = 20;
+    const name = 'iralance';
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>let-const</title>
+</head>
+<body>
+<script>
+    //不能在同一个作用域里重复申明一个变量的
+    //let 可以重新复制 而const不能
+    let count = 10;
+    let discount = 0.9;
+    //let count = 5;
+    const name = 'iralance';
+    if(count > 5) {
+        let count = 0.6;
+    }
+    //console.log 0.9
+    console.log(name);
+    //改变const的值 通过对象  引用类型
+    const person = {
+        name : 'iralance',
+        age : '20'
+    }
+    person.name = 'lee'
+    console.log(person);
+
+    //禁止改变 const的值
+    const lee = Object.freeze(person);
+    lee.age = 10
+    console.log(lee)
+</script>
+</body>
+</html>
