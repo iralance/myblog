@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>arrow_function</title>
+</head>
+<body>
+<script>
+    const numbers = [2,3,4,5,6,7,8];
+    const double = numbers.map(function(number){
+        return 2*number;
+    })
+
+    const double2 = numbers.map((number) => {
+        return 2*number;
+    })
+    const double3 = numbers.map(number => 2*number);
+    console.log(double3)
+
+    const iralance = {
+        name: "iralance",
+        hobbies: ["read", "sleep", "eat"],
+        printHobbies: function() {
+            //箭头函数的this指向父级this
+            this.hobbies.map((hobby) => {
+                console.log(`${this.name} love ${hobby}`)
+            })
+        }
+    }
+    iralance.printHobbies();
+</script>
+</body>
+</html>
