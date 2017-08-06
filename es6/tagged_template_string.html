@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tagged template string</title>
+    <style>
+        .highlight{
+            padding:2px 5px;
+            background:#00adb5;
+            color:#ffffff;
+        }
+    </style>
+</head>
+<body>
+<script>
+    //标签模板字符串
+    function highlight(strings ,...values) {
+//        debugger
+        const highlighted = values.map(value => `<span class="highlight">${value}</span>`)
+//        let str = '';
+//        strings.forEach((string, i) => str += `${string}${highlighted[i] || ''}`)
+//        return str;
+        return strings.reduce((prev, curr, i) => `${prev}${curr}${highlighted[i] || ''}`,'')
+    }
+    const user = "iralance"
+    const topic = "es6"
+    const contense = highlight`${user} has learn ${topic}.`
+    document.body.innerHTML = contense
+</script>
+</body>
+</html>
