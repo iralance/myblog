@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>template string examples</title>
+</head>
+<body>
+<script>
+    const iralance = {
+        name: "iralance",
+        date: "2017-08-06",
+        todos: [
+            {name: "go to work", completed: true},
+            {name: "go to shopping", completed: false},
+            {name: "eat something", completed: false},
+        ]
+    }
+
+    function renderTodos(todos) {
+        return `<ul>
+            ${iralance.todos.map(todo => `
+                <li>
+                    ${todo.name} ${todo.completed?"done":"none"}
+                </li>
+            `).join('') }
+        </ul>`
+    }
+    const template = `
+        ${renderTodos(iralance.todos)}
+    `
+    document.body.innerHTML = template;
+</script>
+</body>
+</html>
