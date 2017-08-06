@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>arrow function</title>
+    <style>
+        .zoo{background:#000000;width:200px;height:200px;}
+        .red{background: #ff0000;}
+    </style>
+</head>
+<body>
+<button class="zoo"></button>
+<script>
+    //
+    const Person = function(name, points) {
+        this.name = name;
+        this.points = points;
+    }
+    const iralance = new Person('iralance', 100);
+    Person.prototype.updatePoints = function() {
+        console.log(this);
+        this.points++;
+        console.log(this.points);
+    }
+
+    //2.当你真正要使用this的时候
+    const button = document.querySelector('.zoo');
+    button.addEventListener('click',function(){
+        this.classList.add('red');
+        setTimeout(() => {
+            this.classList.remove('red')
+        },2000)
+    })
+
+
+    //3.需要使用arguments对象
+    const sum = function() {
+        return Array.from(arguments).reduce((prevSum ,value) => prevSum + value ,0)
+    }
+
+    const sum1 = (...args) => {
+        return args.reduce((prevSum ,value) => prevSum + value ,0)
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>template string</title>
+</head>
+<body>
+<script>
+    const person = "iralance"
+    const age = 25;
+//    const template = ['<div class="greet">',
+//            '<p>hello</p>',
+//            '</div>'].join('');
+    //trim 去除空格
+    const template = `
+        <div class="greet">
+        <p>${person}</p>
+        </div>`.trim()
+
+    console.log(template);
+</script>
+</body>
+</html>
