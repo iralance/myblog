@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>destructuring array</title>
+</head>
+<body>
+<script>
+    const numbers = ['one', 'two', 'three', 'four'];
+    //可以给默认值 undefined
+    const [one,,three] = numbers
+    console.log(one,three)
+    const [one1, ...others] = numbers
+    console.log(one1,others)
+
+    //a b交换值
+    let a = 10;
+    let b = 20;
+    [a,b] = [b,a]
+    console.log(a,b)
+
+</script>
+</body>
+</html>
