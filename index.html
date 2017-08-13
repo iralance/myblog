@@ -38,9 +38,15 @@ window.config = {
     <div id="comments"></div>
   </div>
   <div id="loader"><div></div></div>
-  <div style="position:fixed;top:100px;right:10px;width:200px;height:180px;z-index:999;text-align:center">
+  <div style="position:fixed;top:100px;right:10px;width:200px;height:180px;z-index:999;text-align:center" id="qrcode">
     <p>打赏通道(QQ，微信，支付宝）</p>
     <img src="./pay.png" style="width:150px;height:150px;">
   </div>
-<script type="text/javascript" src="./build.fce125d9.js"></script></body>
+<script type="text/javascript" src="./build.fce125d9.js"></script>
+<script>
+  if(window.innerWidth<1000){
+    document.getElementById('qrcode').remove();
+  }
+</script>
+</body>
 </html>
