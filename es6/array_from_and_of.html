@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array from and of</title>
+</head>
+<body>
+<ul>
+    <li>Go to store</li>
+    <li>Watch tv</li>
+    <li>Go shopping</li>
+</ul>
+<script>
+    //类数组对象
+    const todos = document.querySelectorAll('li')
+//    const todosArr = Array.from(todos)
+//    const names = todosArr.map(todo => todo.textContent)
+    const names = Array.from(todos, todo => todo.textContent);
+    console.log(names)
+
+    function sum() {
+        return Array.from(arguments).reduce((prev, curr) => prev + curr, 0)
+    }
+
+    console.log(Array.of(1, 2, 3, 4, 5, 6))
+</script>
+</body>
+</html>
