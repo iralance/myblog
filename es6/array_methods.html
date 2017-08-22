@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array methods</title>
+</head>
+<body>
+<script>
+    const inventory = [
+        {name: 'apples', quantity: 2},
+        {name: 'bananas', quantity: 0},
+        {name: 'cherries', quantity: 5},
+    ];
+
+    //.find()
+    //    const bananas = inventory.find((element, index, array))
+    const bananas = inventory.find(fruit => {
+        console.log(fruit)
+        if(fruit.name === 'bananas'){
+            return true
+        }
+        return false;
+    })
+    console.log(bananas)
+    //const bananas = inventory.find(fruit => fruit.name === 'bananas');
+    //.findIndex()
+    const bananasIndex = inventory.findIndex(fruit => {
+        if(fruit.name == 'bananas') {
+            return true;
+        }
+        return false;
+    })
+    //const bananasIndex = inventory.findIndex(fruit => fruit.name === 'bananas');
+    console.log(bananasIndex)
+
+    //.some
+    const isEnough = inventory.some(fruit => fruit.quantity > 0)
+    console.log(isEnough)
+
+    //.every()
+    const isALlEnough = inventory.every(fruit => fruit.quantity>0)
+    console.log(isALlEnough)
+
+</script>
+</body>
+</html>
