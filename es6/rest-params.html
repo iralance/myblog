@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rest params</title>
+</head>
+<body>
+<script>
+    function sum(...numbers) {
+        return numbers.reduce((prev, curr) => prev+curr,0)
+    }
+
+    sum(1, 2, 3, 4);
+
+</script>
+</body>
+</html>
