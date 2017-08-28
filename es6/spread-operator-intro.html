@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>spread operator intro</title>
+</head>
+<body>
+<script>
+    const youngers = ['goole','facebook'];
+    const olders = ['baidu','tencent'];
+
+//    let members = [];
+//    members = members.concat(olders);
+//    members.push('Mary');
+//    members = members.concat(olders);
+//    console.log(members);
+    let members = [...youngers,'Mary',...olders];
+    console.log(members);
+</script>
+</body>
+</html>
